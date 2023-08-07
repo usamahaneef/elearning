@@ -77,6 +77,26 @@
                                         <li><a href="form.html">Add Quiz</a></li>
                                     </ul>
                                 </li>
+                                <li><a><i class="fa fa-edit"></i>Boards<span class="fa fa-chevron-down"></span></a>
+                                    <ul class="nav child_menu">
+                                        <li><a href="{{url('admin/board')}}">Board list</a></li>
+                                    </ul>
+                                </li>
+                                <li><a><i class="fa fa-edit"></i>Paper<span class="fa fa-chevron-down"></span></a>
+                                    <ul class="nav child_menu">
+                                        <li><a href="{{url('admin/paper')}}">paper list</a></li>
+                                    </ul>
+                                </li>
+                                <li><a><i class="fa fa-edit"></i>Student<span class="fa fa-graduation-cap"></span></a>
+                                    <ul class="nav child_menu">
+                                        <li><a href="{{url('admin/student')}}">Students list</a></li>
+                                    </ul>
+                                </li>
+                                <li><a><i class="fa fa-edit"></i>FeedBack<span class="fa fa-chevron-down"></span></a>
+                                    <ul class="nav child_menu">
+                                        <li><a href="{{url('admin/feedback')}}">Feedback list</a></li>
+                                    </ul>
+                                </li>
                             </ul>
                         </div>
                      

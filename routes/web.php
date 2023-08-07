@@ -1,5 +1,9 @@
 <?php
 
+use App\Http\Controllers\Admin\BoardController;
+use App\Http\Controllers\Admin\FeedbackController;
+use App\Http\Controllers\Admin\PaperController;
+use App\Http\Controllers\Admin\StudentController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\ChangePasswordController;
 use App\Http\Controllers\HomeController;
@@ -25,6 +29,18 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'check_admin'], 'as'
     Route::post('profile/edit/{id}', [AdminController::class, 'update']);
     Route::post('password/edit/{id}', [ChangePasswordController::class, 'store']);
     Route::get('users', [AdminController::class, 'show'])->name('users');
+    // Board routes
+    Route::get('board',[BoardController::class, 'index'])->name('board');
+    Route::post('board/add',[BoardController::class, 'store']);
+    Route::post('board/edit/{board}',[BoardController::class, 'update']);
+    Route::get('board/delete/{board}',[BoardController::class, 'delete']);
+    //paper routes
+    Route::get('paper',[PaperController::class, 'index'])->name('paper');
+    //Student routes
+    Route::get('student',[StudentController::class, 'index']);
+    Route::get('student/status/{student}',[StudentController::class, 'status']);
+    // Feed Back routes
+    Route::get('feedback',[FeedbackController::class ,'index']);
 
 });
 
